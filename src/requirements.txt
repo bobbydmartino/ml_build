@@ -1,0 +1,6 @@
+#Put your python requirements here
+#numpy, matplotlib, tensorflow, jupyter already installed in tensorflow/tensorflow:latest-gpu-py3-jupyter 
+pandas
+sklearn
+jupyterlab==1.2.11
+nodejs
