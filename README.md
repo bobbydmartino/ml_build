@@ -1,6 +1,21 @@
-# README #
-#here is a quick outline to try and give a rundown of how I set things up.
+# ML build
 
+Overview
+	motivation
+		custom docker scripts
+		easy for prototyping
+		jupyter immediately customizeable
+		avoid conda or poetry crap
+
+How to use:
+	copying
+	ssh in for better terminal
+	setting up shadow and password
+	running lab and notebook (immediately have dependencies)
+	requirements.txt
+
+
+Components
 - <project>_build (parent dir of container build)
 	- cleanup_container.sh
 		- stops container processes
@@ -15,8 +30,8 @@
 			- group
 			- (default user is arc_user, to change edit in group/passwd/dockerfile/ and rename the arc_user dir)
 		- misc/
-			- random crap I don't know where else to put (just reference in the Dockerfile)
-		- arc_user/
+			- lab and notebook
+		- user/
 			- user home directory for container env
 			- keep scripts for cronjobs, etc.
 		- init

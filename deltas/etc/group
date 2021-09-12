@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:arc_user
+sudo:x:27:user
 audio:x:29:
 dip:x:30:
 www-data:x:33:
@@ -43,4 +43,4 @@ systemd-resolve:x:103:
 messagebus:x:104:
 ssh:x:105:
 crontab:x:106:
-arc_user:x:1001:
+user:x:1001:
