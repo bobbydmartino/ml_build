@@ -1,22 +1,22 @@
 # ML build
 
 ## Overview
-	I wanted a modular docker base to quickly prototype and work on disparate machine learning projects. This makes creating and destroying docker containers super easy! On top of that you can easily launch Jupyter straight from the container and develop notebooks right inside the container! It uses a requirements.txt file that is pip installed into the container to avoid anaconda bloat or the overhead of using something like poetry.
+I wanted a modular docker base to quickly prototype and work on disparate machine learning projects. This makes creating and destroying docker containers super easy! On top of that you can easily launch Jupyter straight from the container and develop notebooks right inside the container! It uses a requirements.txt file that is pip installed into the container to avoid anaconda bloat or the overhead of using something like poetry.
 	
 ## How to use:
-	First thing I do is copy it into a new folder
+First thing I do is copy it into a new folder
 
-	`cp -r ml_build <New Project>_build`
+`cp -r ml_build <New Project>_build`
 
-	Then `./generate_container.sh --run` (see the help for more options, also it is super modifyable)
+Then `./generate_container.sh --run` (see the help for more options, also it is super modifyable)
 
-	I prefer ssh'ing into docker containers (keeps terminal presets) and this build has ssh'ing capability built in
+I prefer ssh'ing into docker containers (keeps terminal presets) and this build has ssh'ing capability built in
 
-	Currently the ssh password is `password` you can change that by editing the shadow in deltas/etc in the repo. The user is defined in the group and passwd files, also subject to changing them to whatever you want
-	
-	There are custom `lab` and `notebook` scripts included, these are preinstalled in the docker file. Just run `sudo lab` to launch a jupyter lab instance.
+Currently the ssh password is `password` you can change that by editing the shadow in deltas/etc in the repo. The user is defined in the group and passwd files, also subject to changing them to whatever you want
 
-	Add any python deps into requirements.txt
+There are custom `lab` and `notebook` scripts included, these are preinstalled in the docker file. Just run `sudo lab` to launch a jupyter lab instance.
+
+Add any python deps into requirements.txt
 
 
 ## Components
