@@ -32,7 +32,7 @@ Add any python deps into requirements.txt
 			- passwd
 			- shadow
 			- group
-			- (default user is arc_user, to change edit in group/passwd/dockerfile/ and rename the arc_user dir)
+			- (default user is user, to change edit in group/passwd/dockerfile/ and rename the user dir)
 		- misc/
 			- lab and notebook
 		- user/

@@ -25,8 +25,8 @@ RUN mkdir -p /var/run/sshd
 RUN sed -i 's/#X11UseLocalhost yes/X11UseLocalhost no/g' /etc/ssh/sshd_config
 
 # Create User env
-COPY deltas/arc_user/ /home/arc_user/
-RUN chown -R arc_user:arc_user /home/arc_user
+COPY deltas/user/ /home/user/
+RUN chown -R user:user /home/user
 
 # Create additional user
 #RUN mkdir /home/someuser
@@ -38,10 +38,10 @@ RUN chown -R arc_user:arc_user /home/arc_user
 
 
 RUN pip3 install --upgrade pip
-COPY src/requirements.txt /home/arc_user/scripts
+COPY src/requirements.txt /home/user/scripts
 COPY deltas/misc/lab /usr/local/bin
 COPY deltas/misc/notebook /usr/local/bin
-RUN pip3 install -r /home/arc_user/scripts/requirements.txt
+RUN pip3 install -r /home/user/scripts/requirements.txt
 
 
 #get that good good dark mode
